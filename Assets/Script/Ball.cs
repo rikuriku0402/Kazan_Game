@@ -10,9 +10,9 @@ public class Ball : MonoBehaviour
         {
             hit.Hit();
         }
-        if (other.TryGetComponent(out ILoose loose))
+        if (other.TryGetComponent(out ILose loose))
         {
-            loose.Loose();
+            loose.Lose(this.gameObject);
         }
     }
 }

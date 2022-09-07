@@ -16,6 +16,11 @@ public class Rotator : MonoBehaviour
     [Tooltip("zŽ²‚Ì‰ñ“]Šp“x")]
     private float rotateZ = 0;
 
+    private void Start()
+    {
+        rotateY = Random.Range(8f, 15f);
+    }
+
     // Update is called once per frame
     void Update()
     {

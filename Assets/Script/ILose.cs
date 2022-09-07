@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ILoose
+public interface ILose
 {
-    void Loose();
+    void Lose(GameObject obj);
 }
