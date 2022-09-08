@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
         }
         if (other.TryGetComponent(out ILose loose))
         {
-            loose.Lose(this.gameObject);
+            loose.Lose();
         }
     }
 }

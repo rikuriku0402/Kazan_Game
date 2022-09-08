@@ -15,12 +15,12 @@ public class Gate : MonoBehaviour,ILose,IHit
         }
     }
 
-    public void Lose(GameObject ball)
+    public void Lose()
     {
         if (HitORLose.Lose == _type)
         {
             print("‚Í‚¸‚ê");
-            Destroy(ball);
+            //Destroy(ball);
         }
     }
 

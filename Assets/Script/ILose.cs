@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ILose
 {
-    void Lose(GameObject obj);
+    void Lose();
 }
