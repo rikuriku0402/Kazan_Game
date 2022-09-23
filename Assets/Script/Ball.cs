@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField]
+    GameObject _spawn;
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out IHit hit))
         {
             hit.Hit();
         }
-        if (other.TryGetComponent(out ILose loose))
+        else if(!other.TryGetComponent(out IHit notHit))
         {
-            loose.Lose();
+            gameObject.SetActive(false);
+            gameObject.transform.position = _spawn.transform.position;
+            GameManager.Instance._isBall = false;
         }
     }
 }
